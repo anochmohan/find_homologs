@@ -10,7 +10,7 @@ subject_file="$2"
 output_file="$3"
 
 #BLAST query
-tblastn -query $query_file -subject $subject_file -task blastn-short -outfmt '6 std qlen' | awk"$3>30 && $13>90" > $output_file
+tblastn -query $query_file -subject $subject_file -task tblastn-fast -outfmt '6 std qlen' | awk '$3>30 && $12>90' > $output_file
 
 #Find perfect match
 #match="$(grep -f $query_file $output_file | wc -l)"
