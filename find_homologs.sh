@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Takes in query file
 query_file="$1"
 
